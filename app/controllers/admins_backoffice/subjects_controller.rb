@@ -2,7 +2,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
   
   def index
-    @subject = Subject.all.page params[:page]
+    @subjects = Subject.all.page params[:page]
   end
 
   def new
@@ -23,7 +23,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def update
     if @subject.update(params_subject)
-      redirect_to admins_backoffice_subject_path, notice: "Assunto/Área atualizado com sucesso!"
+      redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área atualizado com sucesso!"
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def destroy
     if @subject.destroy
-      redirect_to admins_backoffice_subject_path, notice: "Assunto/Área deletado com sucesso!"
+      redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área deletado com sucesso!"
     else
       render :index
     end
