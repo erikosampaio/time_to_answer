@@ -2,7 +2,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
   
   def index
-    @subjects = Subject.all.page params[:page]
+    @subjects = Subject.all.order(:description).page params[:page]
   end
 
   def new
@@ -12,7 +12,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   def create
     @subject = Subject.new(params_subject)
     if @subject.save
-      redirect_to admins_backoffice_subject_path, notice: "Assunto/Área criado com sucesso!"
+      redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área criado com sucesso!"
     else
       render :new
     end
@@ -39,7 +39,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   private
 
-  def params_admin
+  def params_subject
     params.require(:subject).permit(:description)
   end
 
