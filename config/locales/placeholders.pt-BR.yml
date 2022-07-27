@@ -1,0 +1,12 @@
+'pt-BR':
+  placeholders:
+    admin:
+      email: Email do(a) %{model}(a)
+      email_confirmation: Confirme email do(a) %{model}(a)
+      password: Digite a senha
+      password_confirmation: Confirme a senha
+    question:
+      description: Descrição da %{model}
+    subject:
+      description: Descrição do %{model}
+    
