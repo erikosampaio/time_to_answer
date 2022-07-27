@@ -1,5 +1,5 @@
 class AdminsBackoffice::QuestionsController < AdminsBackofficeController
-  before_action :set_question, only: [:edit, :update, :destroy]
+  before_action :set_question, only: [:edit, :update, :destroy, :show]
   before_action :get_subjects, only: [:new, :edit]
   
   def index
@@ -10,6 +10,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
   def new
     @question = Question.new
+  end
+
+  def show
   end
   
   def create

@@ -22,7 +22,7 @@
       <% @subjects.each do |subject|%>
         <tr>
           <td><%= subject.id %></td>
-          <td><%= subject.description %></td>
+          <td><%= link_to subject.description, admins_backoffice_subject_path(subject) %></td>
           <td style="width: 100px">
             <%= link_to edit_admins_backoffice_subject_path(subject), class:"btn btn-primary btn-circle" do %>
               <i class="fa fa-edit"></i>

@@ -1,5 +1,5 @@
 class AdminsBackoffice::SubjectsController < AdminsBackofficeController
-  before_action :set_admin, only: [:edit, :update, :destroy]
+  before_action :set_admin, only: [:edit, :update, :destroy, :show]
   
   def index
     @subjects = Subject.all.order(:description).page params[:page]
@@ -7,6 +7,9 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def new
     @subject = Subject.new
+  end
+
+  def show
   end
 
   def create
