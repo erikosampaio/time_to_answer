@@ -60,6 +60,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # gem 'pry-rails' --> Ativar Pry no rails console
   gem 'awesome_print'
+  # gem to verificy database in grapich (web)
+  gem 'rails_db', '2.3'
 end
 
 group :test do
