@@ -34,7 +34,7 @@
               <span class="icon-bar"></span>
             </button>
             <%= link_to 'Time to Answer', root_path, class:"navbar-brand" %>
-            <%= form_with(url: site_welcome_search_path, local: true, method: :get, class:"navbar-form navbar-left" ) do |form| %>
+            <%= form_with(url: site_search_path, local: true, method: :get, class:"navbar-form navbar-left" ) do |form| %>
               <div class="form-group">
                 <%= form.text_field :term, class:"form-control", placeholder:"Digite algo..." %>
               </div>
@@ -69,16 +69,6 @@
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <% unless params[:term] %>
-          <h3><%= "Últimas perguntas cadastradas..." %></h3>
-        <% else %>
-          <h3><%= "Resultados para \"#{params[:term]}\"..." %></h3>
-        <% end %>
-      </div>
-
       <%= yield %>
     </div> <!-- /container -->
 
