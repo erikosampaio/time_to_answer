@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :questions # Perguntas
   end
 
-  devise_for :admins
+  devise_for :admins, skip: [:registrations] # Não permite cadastrar admins fora do backoffice
   devise_for :users
   
   get 'inicio', to: 'site/welcome#index'
