@@ -23,6 +23,8 @@
         update_at: Atualizado em
       user:
         id: Código
+        first_name: Nome
+        last_name: Sobrenome
         email: Email
         password: Senha
         password_confirmation: Confirmação da Senha
