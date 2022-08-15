@@ -3,6 +3,9 @@ class Question < ApplicationRecord
   has_many :answers
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
+  # Callbacks
+  after_create :set_statistic
+  
   #Kaminari
   paginates_per 5
 
@@ -22,4 +25,10 @@ class Question < ApplicationRecord
     .where(subject_id: subject_id)
     .page(page)
   }
+
+  private
+
+    def set_statistic
+      AdminStatistic.set_event(AdminStatistic::EVENTS[:total_questions])
+    end
 end
