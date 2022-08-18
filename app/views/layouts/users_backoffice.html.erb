@@ -22,7 +22,9 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="#" class="site_title"><i class="fa fa-user"></i> <span>Time to Answer</span></a>
+              <%= link_to site_welcome_index_path, class:"site_title" do %>
+                <i class="fa fa-sitemap"></i> <span>Time to Answer</span></a>
+              <% end %>
             </div>
 
             <div class="clearfix"></div>
@@ -110,7 +112,7 @@
                     <li>
                       <a>
                         <span class="image">
-                          <%= image_tag 'eriko.jpg', alt:"Profile Image" %>
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
                         </span>
                         <span>
                           <span>John Smith</span>
@@ -124,7 +126,7 @@
                     <li>
                       <a>
                         <span class="image">
-                          <%= image_tag 'eriko.jpg', alt:"Profile Image" %>
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
                         </span>
                         <span>
                           <span>John Smith</span>
@@ -138,7 +140,7 @@
                     <li>
                       <a>
                         <span class="image">
-                          <%= image_tag 'eriko.jpg', alt:"Profile Image" %>
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
                         </span>
                         <span>
                           <span>John Smith</span>
@@ -152,7 +154,7 @@
                     <li>
                       <a>
                         <span class="image">
-                          <%= image_tag 'eriko.jpg', alt:"Profile Image" %>
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
                         </span>
                         <span>
                           <span>John Smith</span>
@@ -192,7 +194,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            img - <a href="https://github.com/imgsampaio/time_to_answer">Project GitHub</a>
           </div>
           <div class="clearfix"></div>
         </footer>

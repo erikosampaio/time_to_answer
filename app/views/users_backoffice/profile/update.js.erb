@@ -1,11 +1,12 @@
 $('#avatarModal').modal('hide');
-document.getElementById('imgAvatarSm').src = "<%= url_for(@user.user_profile.avatar) %>";
-document.getElementById('imgAvatarMd').src = "<%= url_for(@user.user_profile.avatar) %>";
-document.getElementById('imgAvatarLg').src = "<%= url_for(@user.user_profile.avatar) %>";
 
-$.bootstrapGrowl('Avatar Atualizado com sucesso', {
+document.getElementById('imgAvatarLg').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('imgAvatarMd').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('imgAvatarSm').src = "<%= url_for(@user.user_profile.avatar) %>"
+
+$.bootstrapGrowl('Avatar atualizado com sucesso!', {
   type: 'success', // (null, 'info', 'danger', 'success')
-  delay: 4000, // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
+  align: 'right', // ('left', 'right', or 'center')
   allow_dismiss: true, // If true then will display a cross to close the popup.
   stackup_spacing: 10 // spacing between consecutively stacked growls.
 });
