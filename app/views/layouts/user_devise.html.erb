@@ -24,9 +24,9 @@
     <% if flash %>
       <% flash.each do |key, value| %>
         <%= javascript_tag do %>
-          $.bootstrapGrowl('<%= value %>', {s
+          $.bootstrapGrowl('<%= value %>', {
           type: 'danger', // (null, 'info', 'danger', 'success')
-          delay: 4000, // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
+          //align: 'right', // ('left', 'right', or 'center')
           allow_dismiss: true, // If true then will display a cross to close the popup.
           stackup_spacing: 10 // spacing between consecutively stacked growls.
           });
